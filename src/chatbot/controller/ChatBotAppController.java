@@ -19,6 +19,17 @@ public class ChatBotAppController
 		
 	}
 	public void start()
+	{
+	}
+	
+	/**
+	 *  Allows other objects access to the notSoCleverBot.
+	 * @return The Chatbot for this app.
+	 */
+	public Chatbot getNotSoCleverBot()
+	{
+		return notSoCleverBot;
+	}
 	/**
 	 * Starts the Chatbot application
 	 */

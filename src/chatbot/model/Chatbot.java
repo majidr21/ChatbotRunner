@@ -25,7 +25,7 @@ public class Chatbot
 	 * Returns the number of chats for this Chatbot
 	 * @return The current number of chats.
 	 */
-public int getNumberOfChats()
+
 	{
 		return numberOfChats;
 	}
@@ -45,6 +45,7 @@ public int getNumberOfChats()
 	}
 
 	public boolean quitChecker(String input)
+	
 	{
 		boolean okToQuit = false;
 	
