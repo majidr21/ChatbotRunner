@@ -20,13 +20,22 @@ public class ChatbotView
 		String output = "";
 		
 		
-		output = JOptionPane.showInputDialog(null, baseController.getNotSoCleverBot().getName() + "says hello, who are you?");
+		output = JOptionPane.showInputDialog(null, baseControler.getNotSoCleverBot().getName() + "says hello, who are you?");
 		
 		
 		return output;
 	}
-}
-	
-		
+
+	/**
+	 * Displays the supplied input via a popup window.
+	 * @param input The text to be displayed.
+	 * @return The users input.
+	 */
+	public void displayInformation(String input)
+	{
+		JOptionPane.showMessageDialog(null, input);
+	}
+	}
+
 		
 	
