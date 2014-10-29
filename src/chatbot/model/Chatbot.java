@@ -151,6 +151,9 @@ public class Chatbot
 		else
 		{
 			processedText = "Boring, that wasn't a meme.";
+			processedText = "You're boring me, I think im going to leave";
+			
+			
 		}
 		
 		return processedText;
@@ -178,7 +181,7 @@ public class Chatbot
 		}
 		
 		return okToQuit;
-	
+		
 		
 	}
 	public String getContentArea()
@@ -191,4 +194,5 @@ public class Chatbot
 		this.contentArea = contentArea;
 	}
 }
+
 

@@ -38,15 +38,15 @@ public class ChatBotAppController
 	public void start()
 	{
 
-		String message = JOptionPane.showInputDialog(null, "Would you like to continue");
-		if (notSoCleverBot.quitChecker(message))
-		{
-			message = notSoCleverBot.processText(message);
-				message = chatbot.view ;
-				
-		}
-
-		JOptionPane.showMessageDialog(null, "We are not done yet...");
+//		String message = JOptionPane.showInputDialog(null, "Would you like to continue");
+//		if (notSoCleverBot.quitChecker(message))
+//		{
+//			message = notSoCleverBot.processText(message);
+//				message = chatbot.view ;
+//				
+//		}
+//
+//		JOptionPane.showMessageDialog(null, "We are not done yet...");
 	}
 
 	private void quit()
