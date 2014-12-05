@@ -37,6 +37,14 @@ public class ChatBotAppController
 
 	public void start()
 	{
+		Object startMessage = null;
+		String message = appView.displayChatbotConversations(startMessage);
+		
+		while(!notSoCleverBot.quitChecker(message))
+		{
+			message = notSoCleverBot.processText(message);
+			message = appView.displayChatbotConversations(message);
+		}
 
 //		String message = JOptionPane.showInputDialog(null, "Would you like to continue");
 //		if (notSoCleverBot.quitChecker(message))

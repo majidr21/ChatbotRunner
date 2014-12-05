@@ -19,11 +19,16 @@ public class Chatbot
 		this.name = name;
 		// this. means talk to the current class
 		numberOfChats = 0;
-	    setContentArea("");
+	    contentArea = "";
+	    userInputList = new ArrayList<String>();
 		memeList = new ArrayList<String>();
 		fillMemeList();
+		// this. means talk to the current class
 		
 	}
+	private ArrayList<String> memelist;
+	private ArrayList<String> userInputList;
+	private ChatUser myUser;
 	
 	/**
 	 * Returns the chatbot's name.
@@ -140,6 +145,8 @@ public class Chatbot
 				 processedText = "";
 			 }
 		}
+		 else if (randomChoice == 2)
+		 {
 			//use contentChecker here
 		}
 		{
@@ -152,8 +159,15 @@ public class Chatbot
 		{
 			processedText = "Boring, that wasn't a meme.";
 			processedText = "You're boring me, I think im going to leave";
-			
-			
+		}
+			}
+		if(randomChoice ==3)
+		{
+			//User based talking
+		}
+		else
+		{
+			//userInput list add
 		}
 		
 		return processedText;
@@ -181,8 +195,27 @@ public class Chatbot
 		}
 		
 		return okToQuit;
+	}
+	
+	@SuppressWarnings("unused")
+	private boolean userInputChecker(String input)
+	{
+		boolean matchesInput = false;
 		
+		if(userInputList.size() > 0)
+		{
+			for(int loopCount = 0; loopCount < userInputList.size(); loopCount++)
+			{
+				if(input.equalsIgnoreCase(userInputList.get(loopCount)))
+				{
+					matchesInput = true;
+					userInputList.remove(loopCount);
+					loopCount--;
+				}
+			}
+		}
 		
+		return matchesInput;
 	}
 	public String getContentArea()
 	{
@@ -192,6 +225,26 @@ public class Chatbot
 	public void setContentArea(String contentArea)
 	{
 		this.contentArea = contentArea;
+	}
+
+	public ChatUser getMyUser()
+	{
+		return myUser;
+	}
+
+	public void setMyUser(ChatUser myUser)
+	{
+		this.myUser = myUser;
+	}
+
+	public ArrayList<String> getMemelist()
+	{
+		return memelist;
+	}
+
+	public void setMemelist(ArrayList<String> memelist)
+	{
+		this.memelist = memelist;
 	}
 }
 

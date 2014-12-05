@@ -15,7 +15,7 @@ public class ChatbotView
 		this.baseControler = baseController;
 	}
 
-	public String displayChatbotConversations(String input)
+	public String displayChatbotConversations(Object startMessage)
 	{
 		String output = "";
 		

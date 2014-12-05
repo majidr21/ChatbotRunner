@@ -1,5 +1,4 @@
-package chatbot.view;
-
+package chatbot.controller;
 
 import java.awt.Color;
 import java.awt.LayoutManager;
@@ -10,10 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
-
-import chatbot.controller.ChatBotAppController;
 import javax.swing.JScrollPane;
 
+@SuppressWarnings({ "unused", "serial" })
 public class ChatbotPanel extends JPanel
 {
 	private ChatBotAppController baseController;
